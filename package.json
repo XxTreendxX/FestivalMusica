@@ -20,5 +20,8 @@
     "url": "https://github.com/XxTreendxX/FestivalMusica/issues"
   },
   "homepage": "https://github.com/XxTreendxX/FestivalMusica#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "sass": "^1.89.0"
+  }
 }
