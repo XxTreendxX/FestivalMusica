@@ -24,8 +24,12 @@ function crearGaleria() {
 
   for (let i = 1; i <= CANTIDAD_IMG; i++) {
     const img = document.createElement("IMG");
+    img.loading = "lazy";
+    img.width = "300";
+    img.height = "200";
     img.src = `src/img/gallery/full/${i}.jpg`;
     img.alt = "Imagen de galeria";
+
 
     //event handler
     img.onclick = function () {
