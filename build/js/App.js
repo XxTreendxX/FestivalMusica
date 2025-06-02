@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', function(){
+    navegacionFija()
     crearGaleria();
 })
+
+function navegacionFija(){
+    const header = document.querySelector('.header')
+    const sobreFestival = document.querySelector('.sobre-festival')
+
+    document.addEventListener('scroll', function(){
+        if(sobreFestival.getBoundingClientRect().bottom < 1){
+            header.classList.add('fixed')
+        }
+        else{
+            header.classList.remove('fixed')
+        }
+    })
+}
 
 function crearGaleria(){
     const CANTIDAD_IMG = 16;
@@ -30,17 +45,32 @@ function mostrarImg(i){
        
     //GENERAL MODAL
     const modal = document.createElement('DIV');
-    modal.classList.add('modal')
-    modal.onclick = cerrarModal();
+    modal.classList.add('modal');
+    modal.onclick = cerrarModal;
+
+    //cerrar modal
+    const cerrarModalBtn = document.createElement('BUTTON')
+    cerrarModalBtn.textContent = 'X'
+    cerrarModalBtn.classList.add('btn-cerrar')
+    cerrarModalBtn.onclick = cerrarModal
+
     modal.appendChild(img);
+    modal.appendChild(cerrarModalBtn)
 
     //agregar al html
     const body = document.querySelector('body');
+    body.classList.add('overflow-hidden')
     body.appendChild(modal)
 
 }
 
 function cerrarModal(){
     const modal = document.querySelector('.modal')
-    modal?.remove()
+    modal.classList.add('fade-out')
+    setTimeout(() => {
+        modal?.remove()
+    },500)
+    const body = document.querySelector('body');
+        body.classList.remove('overflow-hidden');
+    
 }
