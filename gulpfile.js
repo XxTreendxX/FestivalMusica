@@ -1,29 +1,31 @@
-import { src, dest, watch, series } from 'gulp'
-import * as dartSass from 'sass'
-import gulpSass from 'gulp-sass'
+import { src, dest, watch, series } from "gulp";
+import * as dartSass from "sass";
+import gulpSass from "gulp-sass";
 
-const sass = gulpSass(dartSass)
+const sass = gulpSass(dartSass);
 
-export function js (done){
+import terser from "gulp-terser";
 
-    src('src/js/App.js')
-        .pipe(dest('build/js'))
+export function js(done) {
+  src("src/js/App.js").pipe(terser()).pipe(dest("build/js"));
 
-    done();
+  done();
 }
 
-export function css( done )
-{
-    src('src/scss/App.scss', {sourcemaps: true})
-        .pipe(sass().on('error', sass.logError))
-        .pipe(dest('build/css', {sourcemaps: '.'}))
-    done();
+export function css(done) {
+  src("src/scss/App.scss", { sourcemaps: true })
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+      }).on("error", sass.logError)
+    )
+    .pipe(dest("build/css", { sourcemaps: "." }));
+  done();
 }
 
-export function dev ()
-{
-    watch('src/scss/**/*.scss', css);
-    watch('src/js/**/*.js', js);
+export function dev() {
+  watch("src/scss/**/*.scss", css);
+  watch("src/js/**/*.js", js);
 }
 
 export default series(js, css, dev);
