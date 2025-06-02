@@ -27,7 +27,7 @@ function crearGaleria() {
     img.loading = "lazy";
     img.width = "300";
     img.height = "200";
-    img.src = `src/img/gallery/full/${i}.jpg`;
+    img.src = `src/img/gallery/thumb/${i}.jpg`;
     img.alt = "Imagen de galeria";
 
 
