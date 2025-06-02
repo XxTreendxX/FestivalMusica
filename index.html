@@ -1,27 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival de Música</title>
-    <link rel="stylesheet" href="build/css/App.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="build/css/App.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <div class="contenedor contenido-header">
-            <h1>Techno &  EDM Festival</h1>
-            <nav class="navegacion-principal">
-                <a href="#">LineUP</a>
-                <a href="#">Galeria</a>
-                <a href="#">Boletos</a>
-            </nav>
-        </div>
+      <div class="contenedor contenido-header">
+        <h1>Techno & EDM Festival</h1>
+        <nav class="navegacion-principal">
+          <a href="#">LineUP</a>
+          <a href="#">Galeria</a>
+          <a href="#">Boletos</a>
+        </nav>
+      </div>
     </header>
-</body>
 
+    <div class="video">
+      <div class="overley">
+        <div class="contenedor contenido-video">
+          <h2>Techno & EDM Festival</h2>
+          <p>Julio 2026, Ciudad Autonoma de Buenos Aires, Argentina.</p>
+        </div>
+      </div>
+      <video autoplay muted loop>
+        <source src="video/dj.mp4" type="video/mp4" />
+        <source src="video/dj.webm type="video/webm" />
+        <source src="video/dj.ogv" type="video/ogg" />
+      </video>
+    </div>
+
+    <section class="sobre-festival">
+      <div class="imagen">
+        <img src="src/img/imagen_dj.jpg" alt="DJ" />
+      </div>
+      <div class="contenido-festival">
+        <h2>Techno & EDM Festival</h2>
+        <p class="fecha">Julio 2026, C.A.B.A., Argentina</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam odio
+          nulla soluta illo esse reiciendis deserunt perspiciatis, suscipit ut
+          voluptatem earum doloribus ipsum quaerat exercitationem quas, labore,
+          autem unde. Corrupti.
+        </p>
+      </div>
+    </section>
+
+    <section id="lineup" class="lineup">
+      <h3>Line Up</h3>
+
+      <p class="dia">Viernes 21</p>
+      <div class="escenarios-contenedor">
+        <div class="escenario bg-amarillo">
+          <p class="nombre-escenario">Techno</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Adam Beyer</span></li>
+            <li>22:00 | <span>Carl Cox</span></li>
+            <li>20:00 | <span>HI-LO</span></li>
+            <li>19:00 | <span>Amelie Lens</span></li>
+            <li>18:00 | <span>CamelPhat</span></li>
+            <li>17:00 | <span>ARTBAT</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+
+        <div class="escenario bg-verde">
+          <p class="nombre-escenario">EDM</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>David Guetta</span></li>
+            <li>22:00 | <span>Tïesto</span></li>
+            <li>20:00 | <span>Martin Garrix</span></li>
+            <li>19:00 | <span>Steve Aoki</span></li>
+            <li>18:00 | <span>Afrojack</span></li>
+            <li>17:00 | <span>Vintage Culture</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+      </div>
+      <!--.escenarios-contenedor -->
+
+      <p class="dia">Sábado 22</p>
+      <div class="escenarios-contenedor contenedor">
+        <div class="escenario bg-verde">
+          <p class="nombre-escenario">Techno</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Reinier Zonneveld</span></li>
+            <li>22:00 | <span>Eric Prydz</span></li>
+            <li>20:00 | <span>Deadmau5</span></li>
+            <li>19:00 | <span>Joris Voorn</span></li>
+            <li>18:00 | <span>Nina Kraviz</span></li>
+            <li>17:00 | <span>Argy</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+
+        <div class="escenario bg-amarillo">
+          <p class="nombre-escenario">EDM</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Armin Van Buuren</span></li>
+            <li>22:00 | <span>Calvin Harris</span></li>
+            <li>20:00 | <span>Hardwell</span></li>
+            <li>19:00 | <span>Above & Beyond</span></li>
+            <li>18:00 | <span>Diplo</span></li>
+            <li>17:00 | <span>Steve Angello</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+      </div>
+      <!--.escenarios-contenedor -->
+    </section>
+
+    <section class="galeria" id="galeria">
+      <h3>Galeria</h3>
+      <div class="galeria-img"></div>
+    </section>
+
+    <section id="boletos" class="contenedor-boletos">
+      <h3>Boletos</h3>
+
+      <div class="boletos">
+        <div class="pase">
+          <p class="pase-nombre">Pase 1 Día</p>
+          <header class="pase-header">
+            <p>Incluye</p>
+          </header>
+          <div class="pase-body">
+            <ul>
+              <li>Acceso a ambos escenarios</li>
+              <li>Bebida Ilimitada</li>
+              <li>Camisa / Pulsera del Evento</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>$100</p>
+          </footer>
+        </div>
+        <div class="pase">
+          <p class="pase-nombre">Pase 2 Días</p>
+          <header class="pase-header">
+            <p>Incluye</p>
+          </header>
+          <div class="pase-body">
+            <ul>
+              <li>Acceso a ambos escenarios</li>
+              <li>Bebida Ilimitada</li>
+              <li>Camisa / Pulsera del Evento</li>
+              <li>Acceso VIP</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>$180</p>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-contenido">
+        <div class="footer-col left">
+          <a href="https://www.rodridev.com.ar">RodriDev</a>
+        </div>
+        <div class="footer-col center">
+          <p>© 2025 Rodrigo Otreras — Derechos reservados</p>
+        </div>
+        <div class="footer-col right">
+          <div class="footer-redes">
+            <a
+              href="https://www.linkedin.com/in/rodrigo-nahuel-otreras-703a741a1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <!-- ICONO LINKEDIN SVG -->
+              <svg>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.024-3.037-1.85-3.037-1.852 0-2.135 1.445-2.135 2.939v5.667H9.354V9h3.414v1.561h.047c.476-.902 1.636-1.85 3.368-1.85 3.602 0 4.265 2.37 4.265 5.455v6.286zM5.337 7.433c-1.144 0-2.069-.927-2.069-2.068 0-1.142.926-2.069 2.069-2.069 1.142 0 2.068.927 2.068 2.069 0 1.141-.926 2.068-2.068 2.068zm1.777 13.019H3.561V9h3.553v11.452z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/XxTreendxX"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <!-- ICONO GITHUB SVG -->
+              <svg>
+                <path
+                  d="M12 .5C5.373.5 0 5.873 0 12.5c0 5.292 3.438 9.772 8.205 11.387.6.113.82-.26.82-.577v-2.01c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.09-.746.083-.731.083-.731 1.204.085 1.84 1.236 1.84 1.236 1.073 1.84 2.812 1.308 3.495.999.108-.777.42-1.308.763-1.61-2.665-.304-5.466-1.333-5.466-5.931 0-1.31.468-2.381 1.236-3.222-.123-.303-.536-1.524.117-3.177 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.655 1.653.242 2.874.12 3.177.77.841 1.234 1.912 1.234 3.222 0 4.609-2.803 5.624-5.475 5.921.431.37.815 1.104.815 2.227v3.293c0 .319.217.694.825.576C20.565 22.271 24 17.791 24 12.5 24 5.873 18.627.5 12 .5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="build/js/App.js"></script>
+  </body>
 </html>

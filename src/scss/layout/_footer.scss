@@ -1,0 +1,82 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+    background-color: v.$rosa;
+    padding: 1rem 0;
+    p{
+        color: v.$blanco;
+        font-size: 1.5rem;
+    }
+  
+    &-contenido {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1300px;
+      margin: 0 auto;
+      width: 100%;
+      min-height: 64px;
+      padding: 0 2rem;
+    }
+  
+    &-col {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+      min-width: 0;
+  
+      &.left {
+        justify-content: flex-start;
+  
+        a {
+          color: v.$blanco;
+          font-weight: bold;
+          font-size: 2rem;
+          letter-spacing: 0.5px;
+          text-decoration: none;
+          transition: color 0.2s;
+  
+          &:hover {
+            color: #60a5fa;
+          }
+        }
+      }
+  
+      &.center {
+        justify-content: center;
+        color: #e0e8f0;
+        font-size: 1rem;
+        text-align: center;
+      }
+  
+      &.right {
+        justify-content: flex-end;
+      }
+    }
+  
+    &-redes {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s;
+  
+        &:hover {
+          color: #3b82f6;
+        }
+      }
+  
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        display: block;
+      }
+    }
+  }
+  
